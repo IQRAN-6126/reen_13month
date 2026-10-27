@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reen k liye ♡</title>
+<style>
+:root{--pink:#ff4f91;--rose:#f8a8c6;--cream:#fff5ed;--ink:#6f3c51}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid #8c3157;outline-offset:4px}
+.page{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:34px 20px;text-align:center}
+h1{font-size:clamp(2.7rem,10vw,5.6rem);font-weight:400;line-height:1.02}
+h2{font-size:clamp(1.8rem,6vw,3rem);font-weight:400;line-height:1.12}
+p{line-height:1.7}.script{font-style:italic}
+.kicker{font:600 10px/1.5 Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;opacity:.7;margin-bottom:20px}
+.btn{border:0;border-radius:999px;padding:13px 23px;background:#e94f8b;color:white;box-shadow:0 8px 22px #bc42702b;transition:.2s;margin:8px 4px}
+.btn:hover{transform:translateY(-2px)}.btn:disabled{cursor:not-allowed}
+.floating-heart{position:fixed;bottom:-40px;z-index:30;pointer-events:none;color:#e94f8b;animation:floatUp linear forwards}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.hero{background:radial-gradient(ellipse at 50% 55%,#fffdf8 0,#fff4ed 45%,#f8cbd9 100%)}
+.hero-inner{max-width:680px;position:relative;z-index:2}.hero h1{color:#bd5379}.hero h1 em{color:#ed4e8c}
+.hero p{max-width:420px;margin:22px auto 26px;font-size:15px}
+.sparkle{position:absolute;color:#f2aac5;opacity:.6;animation:twinkle 3s infinite alternate}
+@keyframes twinkle{to{opacity:.15;transform:scale(.7)}}
+.tree-page{background:radial-gradient(ellipse at 50% 42%,#fffefb 0,#fff5ed 62%,#f7d3df 100%)}
+.tree-wrap{width:min(420px,100%);height:480px;position:relative;margin:5px auto 12px;isolation:isolate}
+.tree-wrap:before{content:"";position:absolute;left:17%;top:5%;width:66%;height:55%;border-radius:50%;background:radial-gradient(ellipse,#f8dce7a6 0,#e4efcf70 46%,transparent 72%);filter:blur(12px);opacity:.8;z-index:-1}
+.tree-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1}
+.tree-trunk{fill:none;stroke:url(#woodGradient);stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:700;stroke-dashoffset:700;animation:drawTree 2.4s .2s ease forwards}
+@keyframes drawTree{to{stroke-dashoffset:0}}
+.leaf-canopy{position:absolute;inset:0;z-index:2;pointer-events:none}
+.love-leaf{position:absolute;z-index:2;line-height:1;opacity:0;transform:translate(-50%,-50%) scale(.12) rotate(-35deg);filter:drop-shadow(0 2px 2px #a75b6c18);pointer-events:none}
+.tree-wrap.growing .love-leaf{animation:leafGrow .65s cubic-bezier(.2,1.5,.35,1) forwards;animation-delay:var(--delay,0s)}
+@keyframes leafGrow{0%{opacity:0;transform:translate(-50%,-50%) scale(.12) rotate(-35deg)}65%{opacity:1;transform:translate(-50%,-50%) scale(1.16) rotate(8deg)}100%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(var(--tilt,0deg))}}
+.love-card{position:absolute;left:0;bottom:70px;z-index:4;background:#fffaf6ed;padding:15px 20px;text-align:left;box-shadow:0 8px 24px #a76d7d18;transform:rotate(-2deg);border:1px solid #f6d7e2}
+.love-card small{display:block;font:italic 11px Georgia,serif;color:#8d7a7d}.love-card strong{display:block;color:#d84278;font:700 23px Arial,sans-serif;margin-top:3px}
+.balloon-page{background:linear-gradient(145deg,#fff4ed,#f9d0df 65%,#fff7ed)}.game{width:min(550px,100%);position:relative;z-index:1}.game p{font-size:14px}
+.stage{height:340px;max-width:350px;margin:14px auto 0;position:relative;overflow:hidden;isolation:isolate}
+.balloon{position:absolute;width:88px;height:116px;left:70%;top:62px;transform:translateX(-50%);border-radius:50% 50% 46% 46%;background:radial-gradient(circle at 30% 23%,#ffe4ed 0,#f78bb4 38%,#d94d83 88%);box-shadow:inset -7px -8px 15px #9d174126,0 10px 24px #df286f20;z-index:3;animation:floatBalloon 2.8s ease-in-out infinite alternate}
+.balloon:before{content:"";position:absolute;top:22px;left:22px;width:15px;height:32px;border-radius:50%;background:#ffffffa8;transform:rotate(25deg)}
+.knot{position:absolute;bottom:-7px;left:46px;width:14px;height:14px;background:#d92b70;clip-path:polygon(0 0,100% 0,50% 100%)}
+.string{position:absolute;top:133px;left:50%;height:62px;border-left:1px solid #b98a9b;transform:rotate(3deg)}
+@keyframes floatBalloon{to{margin-top:-10px}}
+.arrow{position:absolute;left:4px;top:119px;width:42px;height:8px;background:#76513b;border-radius:2px;z-index:5;opacity:0}
+.arrow:before{content:"";position:absolute;left:-9px;top:-4px;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:12px solid #c6a36c}
+.arrow:after{content:"";position:absolute;right:-13px;top:-6px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:16px solid #76513b}
+.arrow.fly{animation:shoot .72s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes shoot{0%{left:4px;opacity:1;transform:rotate(-4deg)}80%{opacity:1}100%{left:calc(70% - 46px);opacity:0;transform:rotate(-4deg) scale(.7)}}
+.balloon.pop{animation:pop .24s cubic-bezier(.2,.75,.3,1) forwards;pointer-events:none}
+@keyframes pop{0%{transform:translateX(-50%) scale(1);opacity:1}55%{transform:translateX(-50%) scale(1.12);opacity:.75;filter:blur(1px)}100%{transform:translateX(-50%) scale(.45);opacity:0;filter:blur(4px)}}
+.burst{position:absolute;top:113px;left:70%;width:10px;height:10px;transform:translate(-50%,-50%) scale(.2);opacity:0;z-index:6;pointer-events:none}
+.burst:before,.burst:after{content:"";position:absolute;inset:-22px;border-radius:50%;border:1px solid #e96a9b;opacity:0}.burst:after{inset:-10px;border-color:#f5b4cb}
+.burst.show{animation:softBurst .55s ease-out forwards}.burst.show:before{animation:ringOut .55s ease-out forwards}.burst.show:after{animation:ringOut .42s .04s ease-out forwards}
+@keyframes softBurst{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}35%{transform:translate(-50%,-50%) scale(1);opacity:.8}100%{transform:translate(-50%,-50%) scale(1.5);opacity:0}}
+@keyframes ringOut{0%{transform:scale(.3);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+.reveal{position:absolute;left:50%;top:75px;width:min(285px,90%);transform:translateX(-50%) scale(.94);padding:24px 18px;background:rgba(255,250,246,.98);border:1px solid #f4a6c3;border-radius:10px;box-shadow:0 14px 36px #a45c7629;opacity:0;z-index:8;visibility:hidden;transition:visibility 0s linear .35s}
+.reveal.show{visibility:visible;animation:reveal .55s .08s cubic-bezier(.2,.75,.25,1) forwards}
+@keyframes reveal{0%{opacity:0;transform:translateX(-50%) translateY(10px) scale(.96)}100%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+.status{min-height:26px;margin:8px 0}
+.letter-page{background:radial-gradient(ellipse at center,#fffdf9,#f9d5e1)}.envelope-scene{width:min(440px,100%);margin:34px auto 20px;perspective:900px}
+.envelope{position:relative;width:min(310px,88vw);height:190px;margin:auto;background:#f5a9c3;box-shadow:0 18px 36px #9e4d6c22;cursor:pointer}
+.envelope:before{content:"";position:absolute;inset:0;background:#ffd6e2;clip-path:polygon(0 0,50% 55%,100% 0);transform-origin:top;transition:transform .7s;z-index:3}
+.envelope:after{content:"";position:absolute;inset:0;background:#f8b6cd;clip-path:polygon(0 100%,0 0,50% 56%,100% 0,100% 100%);z-index:2}
+.envelope.open:before{transform:rotateX(180deg);z-index:1}.seal{position:absolute;z-index:4;left:50%;top:48%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#e84c87;color:#fff;font-size:22px;transition:opacity .3s}
+.envelope.open .seal{opacity:0}.letter{position:absolute;z-index:1;left:8%;right:8%;bottom:8px;height:155px;padding:20px 12px;background:#fffaf5;transition:transform .7s;box-shadow:0 0 10px #9d47621a}
+.envelope.open .letter{transform:translateY(-100px);z-index:4}.letter b{display:block;color:#df4a84;font-size:20px;margin:8px}
+.gallery-page{background:linear-gradient(#fff9f2,#f9d7e2)}.gallery{width:min(650px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:28px auto}
+.polaroid{background:#fff;padding:8px 8px 18px;box-shadow:0 8px 20px #8e53651b;transform:rotate(var(--r));transition:.25s;min-width:0}
+.polaroid:hover{transform:rotate(0) scale(1.04)}.polaroid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#f8d4e0;color:#8d5268;font-size:12px}
+.polaroid img.photo-missing{object-fit:contain;padding:10px;outline:1px dashed #d98ba8}.polaroid p{font-size:12px;margin-top:9px}
+.gift-page{background:radial-gradient(ellipse at center,#fff9ee,#f4c4d9)}.gift{width:135px;height:115px;position:relative;margin:42px auto;cursor:pointer;isolation:isolate;filter:drop-shadow(0 12px 14px #b94a7924);transition:transform .35s ease}
+.gift:hover{transform:translateY(-4px)}.gift-base{position:absolute;bottom:0;width:135px;height:82px;background:linear-gradient(135deg,#f879a8,#df3d7a);border-radius:4px}
+.gift-base:before{content:"";position:absolute;left:56px;top:0;width:23px;height:100%;background:linear-gradient(90deg,#ffe9b7,#fff5d7,#f6d68d)}
+.lid{position:absolute;left:-7px;top:15px;width:149px;height:24px;background:linear-gradient(135deg,#ef6395,#d93676);z-index:4;transform-origin:12% 80%;transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+.gift.open .lid{transform:translate(-12px,-48px) rotate(-17deg)}.bow{position:absolute;top:-8px;left:48px;width:40px;height:28px;border:7px solid #ffe7ad;border-radius:50%;z-index:5;transition:transform .38s ease,opacity .25s ease}
+.gift.open .bow{transform:translate(-12px,-25px) rotate(-35deg) scale(.75);opacity:0}.gift-laces{position:absolute;inset:33px 0 0;z-index:3;pointer-events:none}
+.gift-lace{position:absolute;display:block;height:5px;width:57px;background:linear-gradient(#fff0c9,#f4d38a);border-radius:6px;transition:transform .58s ease,opacity .35s ease}
+.gift-lace.left{left:14px;top:17px;transform:rotate(32deg)}.gift-lace.right{right:14px;top:17px;transform:rotate(-32deg)}.gift-lace.knot{left:49px;top:26px;width:37px;height:7px}
+.gift.open .gift-lace.left{transform:translate(-36px,22px) rotate(58deg);opacity:0}.gift.open .gift-lace.right{transform:translate(36px,22px) rotate(-58deg);opacity:0}.gift.open .gift-lace.knot{transform:translateY(-22px) scale(.6);opacity:0}
+.gift-note{display:none;max-width:440px;margin:18px auto;padding:22px;background:#fffaf5;border:1px solid #ffd1e1;border-radius:16px;box-shadow:0 10px 30px #8e53651b;opacity:0;transform:translateY(28px) scale(.82)}
+.gift-note.show{display:block;animation:giftNotePop .8s cubic-bezier(.16,1.3,.3,1) forwards}
+@keyframes giftNotePop{0%{opacity:0;transform:translateY(-35px) scale(.72)}55%{opacity:1;transform:translateY(8px) scale(1.04)}78%{transform:translateY(-4px) scale(.99)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.final-page{background:radial-gradient(ellipse at 50% 20%,#f6a0c4,#e83e87 65%,#b91f66);color:white}.final-page .script{color:#ffe2ec}.final-page .btn{background:#fff7f2;color:#c43170}
+.music{position:fixed;right:17px;bottom:17px;width:46px;height:46px;border:0;border-radius:50%;background:#e94f8b;color:white;font-size:20px;z-index:20;box-shadow:0 5px 20px #0002}
+@media(max-width:600px){.gallery{grid-template-columns:repeat(2,1fr);gap:12px}.tree-wrap{height:420px}.love-card{bottom:38px;left:2px;padding:11px 14px}.love-card strong{font-size:20px}.love-leaf{font-size:19px!important}.page{padding:45px 18px}.stage{height:320px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<section class="page hero" id="home">
+<span class="sparkle" style="top:17%;left:13%">♡</span><span class="sparkle" style="top:29%;right:16%;animation-delay:1s">✦</span><span class="sparkle" style="bottom:18%;left:20%;animation-delay:2s">♡</span>
+<div class="hero-inner"><div class="kicker">Chota surprise naak se bolne wali shaytan k liye</div><h1>Choti Badmash <em>Reen</em> ♡</h1><p>apke liye ek chota sa gift.</p><p>Bohot se ladki ayi, bht gayi ... par ap hi constant rhi. Pichile saal isi tim pe apse mila tha aur apko apna duniya maana tha aur is saal abhi bhi ap hi meri dunia hai.</p><button class="btn" onclick="go('tree')">shuru kijiye ♡</button></div>
+</section>
+<section class="page tree-page" id="tree"><div style="width:min(620px,100%)"><div class="kicker">Dono ke pyar ka tree jo hamesha ugta raha hai....</div><h2>Jaise mera dil dhadakta hai sirf.. <span class="script" style="color:#e94f8b">apke liye</span></h2>
+<div class="tree-wrap"><svg class="tree-svg" viewBox="0 0 420 480" aria-label="A tree filled with love"><defs><linearGradient id="woodGradient" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#805640"/><stop offset=".48" stop-color="#bd8966"/><stop offset="1" stop-color="#79503d"/></linearGradient></defs><path class="tree-trunk" d="M210 485 C208 425 215 365 211 315 C207 275 211 245 205 205 M210 320 C176 290 151 258 131 222 M207 282 C245 250 265 215 278 174 M205 244 C173 223 160 190 154 161 M210 224 C232 197 239 169 240 139 M176 290 C143 281 117 263 100 238 M131 222 C110 202 105 180 105 159 M278 174 C305 159 323 135 331 111 M265 215 C290 211 311 194 328 173 M154 161 C140 143 138 125 141 107 M240 139 C254 119 257 99 253 80 M100 238 C82 224 72 204 69 188 M331 111 C344 97 350 80 349 64"/></svg><div class="leaf-canopy" id="leafCanopy"></div><div class="love-card"><small>maine apne hatho se banaya hai apke liye...</small><strong>I love you pyari bacchi</strong></div></div>
+<p class="script">Chahe hum alag hi kyu na ho, hum hamesha sath sath hai. Sirf aur 2 saal.</p><button class="btn" onclick="go('balloon')">EK ALAG SURPRISE →</button></div></section>
+<section class="page balloon-page" id="balloon"><div class="game"><div class="kicker">EK GAME KHELTE HAI</div><h2>isko fodh dijiye, <span class="script" style="color:#e94f8b">Reen</span> 🎈</h2><p>TIR FEKIYE AUR MESSAGE AYEGA</p><div class="stage"><div class="reveal" id="reveal"><div style="font-size:36px">💌</div><h2 style="font-size:26px;margin:9px 0">Meri reen k liye</h2><p>Mai khus huu ki mai apse mila. ♡</p></div><div class="balloon" id="balloon"><div class="knot"></div><div class="string"></div></div><div class="arrow" id="arrow"></div><div class="burst" id="burst"></div></div><button class="btn" id="shootBtn" onclick="shoot()">🏹 Shoot kijiye</button><p class="status" id="status">Ready when you are, Reen. 💗</p><button class="btn" id="retry" style="display:none" onclick="resetBalloon()">Pop it again ↻</button><button class="btn" onclick="go('letter')">Open a letter →</button></div></section>
+<section class="page letter-page" id="letter"><div style="width:min(600px,100%)"><div class="kicker">kuch labz meri zindegi k naam</div><h2>A letter for <span class="script" style="color:#e94f8b">you</span></h2><p style="margin-top:12px">Tap kijiye letter pe to open hoga.</p><div class="envelope-scene"><div class="envelope" id="envelope" onclick="openLetter()" role="button" tabindex="0" aria-label="Open letter"><div class="letter"><span style="font-size:23px">♡</span><b>Dear Reen,</b><p style="font-size:12px">kash hum dono aage saal ki tarah is saal bhi mil paate. I miss you.</p></div><div class="seal">♥</div></div></div><button class="btn" onclick="go('gallery')">Our memories →</button></div></section>
+<section class="page gallery-page" id="gallery"><div style="width:min(650px,100%)"><div class="kicker">Little moments, forever memories</div><h2>Our little <span class="script" style="color:#e94f8b">gallery</span> ♡</h2><p>Our memories, saved in one little place. 💗</p><div class="gallery"><div class="polaroid" style="--r:-3deg"><img src="./photo1.jpeg" alt="Memory 1"><p>My favorite person</p></div><div class="polaroid" style="--r:2deg"><img src="./photo2.jpeg" alt="Memory 2"><p>A little moment</p></div><div class="polaroid" style="--r:3deg"><img src="./photo3.jpeg" alt="Memory 3"><p>You and me</p></div><div class="polaroid" style="--r:2deg"><img src="./photo4.jpeg" alt="Memory 4"><p>My happy place</p></div><div class="polaroid" style="--r:-2deg"><img src="./photo5.jpeg" alt="Memory 5"><p>Little things</p></div><div class="polaroid" style="--r:3deg"><img src="./photo6.jpeg" alt="Memory 6"><p>Always my favorite</p></div></div><button class="btn" onclick="go('gift')">Ek last surprise →</button></div></section>
+<section class="page gift-page" id="gift"><div style="width:min(580px,100%)"><div class="kicker">Ek chota present, just for you</div><h2>For my <span class="script" style="color:#e94f8b">favorite person</span> 🎁</h2><p>Gift dekhne k liye gift pe tap kijiye.</p><div class="gift" id="giftBox" onclick="openGift()" role="button" tabindex="0" aria-label="Open gift"><div class="gift-base"></div><div class="gift-laces"><span class="gift-lace left"></span><span class="gift-lace right"></span><span class="gift-lace knot"></span></div><div class="lid"></div><div class="bow"></div></div><div class="gift-note" id="giftNote"><div style="font-size:36px">💖</div><h2 style="font-size:27px">It's you, Reen.</h2><p>Not a perfect world. Not a perfect story. Sirf hazaro imperfect moment aur memories banani hai apke sath.</p><p class="script" style="margin-top:12px">agar firse choose karne ka mauka mile, mai apko choose karunga. ♡</p></div><button class="btn" onclick="go('final')">my final message →</button></div></section>
+<section class="page final-page" id="final"><div style="max-width:680px;position:relative;z-index:1"><div class="kicker">A final little note</div><div style="font-size:52px;margin-bottom:20px">♡</div><h1 class="script">I Love You,<br>Reen</h1><p style="max-width:470px;margin:25px auto">Thank you mera sath dene k liye. I hope is gift ko dekh k apke chehre pe smile ayi hogi, jo kuch mera hai ap wo sab deserve karti hai, bass mujhe kabhi dhoka mat dijiyega.</p><p class="script" style="font-size:25px;margin:25px">Hamesha pyar karunga ♡</p><button class="btn" onclick="celebrate()">apke liye 1000 hearts 💗</button><p style="font:11px Arial,sans-serif;letter-spacing:2px;margin-top:35px;opacity:.8">MADE ESPECIALLY FOR REEN</p></div></section>
+<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="Play music">♫</button>
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+(function growLoveTree(){const wrap=document.querySelector('.tree-wrap'),canopy=document.getElementById('leafCanopy');if(!wrap||!canopy)return;const leafTypes=[{symbol:'💗',size:19},{symbol:'💖',size:18},{symbol:'💕',size:18},{symbol:'💞',size:18},{symbol:'♡',size:24},{symbol:'♥',size:18},{symbol:'💘',size:18}];const leaves=[];for(let i=0;i<58;i++){const angle=i*2.399963229728653,radius=Math.sqrt((i+.5)/58),x=210+Math.cos(angle)*139*radius,y=176+Math.sin(angle)*112*radius,type=leafTypes[(i*7+Math.floor(i/3))%leafTypes.length];leaves.push({x,y,type,delay:i*.075,tilt:((i%7)-3)*7});}[[132,158],[156,122],[189,94],[224,92],[260,113],[292,139],[311,167],[115,190],[282,195],[174,215],[235,218]].forEach((pt,i)=>leaves.push({x:pt[0],y:pt[1],type:leafTypes[(i+2)%leafTypes.length],delay:(58+i)*.075,tilt:(i%5-2)*8}));leaves.forEach(item=>{const el=document.createElement('span');el.className='love-leaf heart-leaf';el.textContent=item.type.symbol;el.style.left=(item.x/420*100)+'%';el.style.top=(item.y/480*100)+'%';el.style.fontSize=item.type.size+'px';el.style.setProperty('--delay',item.delay+'s');el.style.setProperty('--tilt',item.tilt+'deg');canopy.appendChild(el);});if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){wrap.classList.add('growing');obs.disconnect();}},{threshold:.3});obs.observe(document.getElementById('tree'));}else wrap.classList.add('growing');})();
+function makeHeart(){const el=document.createElement('span');el.className='floating-heart';el.textContent=['♡','💗','💕','💖','✦'][Math.floor(Math.random()*5)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(13+Math.random()*22)+'px';el.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),10000);}
+setInterval(makeHeart,850);
+let popped=false,shooting=false;
+function playPopSound(){try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const ctx=new A(),now=ctx.currentTime,b=ctx.createBuffer(1,Math.floor(ctx.sampleRate*.12),ctx.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);const n=ctx.createBufferSource();n.buffer=b;const f=ctx.createBiquadFilter();f.type='lowpass';f.frequency.setValueAtTime(1800,now);f.frequency.exponentialRampToValueAtTime(350,now+.11);const g=ctx.createGain();g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(.22,now+.008);g.gain.exponentialRampToValueAtTime(.0001,now+.12);n.connect(f);f.connect(g);g.connect(ctx.destination);n.start(now);n.stop(now+.12);const o=ctx.createOscillator(),og=ctx.createGain();o.type='sine';o.frequency.setValueAtTime(190,now);o.frequency.exponentialRampToValueAtTime(75,now+.09);og.gain.setValueAtTime(.0001,now);og.gain.exponentialRampToValueAtTime(.12,now+.006);og.gain.exponentialRampToValueAtTime(.0001,now+.1);o.connect(og);og.connect(ctx.destination);o.start(now);o.stop(now+.11);setTimeout(()=>ctx.close(),250);}catch(e){console.log('Pop sound unavailable:',e);}}
+function shoot(){if(popped||shooting)return;shooting=true;const arrow=document.getElementById('arrow'),balloon=document.getElementById('balloon'),burst=document.getElementById('burst'),status=document.getElementById('status'),button=document.getElementById('shootBtn');arrow.classList.remove('fly');balloon.classList.remove('pop');burst.classList.remove('show');void arrow.offsetWidth;arrow.classList.add('fly');button.disabled=true;button.style.opacity='.55';status.textContent='Here it comes, Reen... 💘';setTimeout(()=>{playPopSound();balloon.classList.add('pop');burst.classList.add('show');for(let i=0;i<24;i++)setTimeout(makeHeart,i*35);setTimeout(()=>{const reveal=document.getElementById('reveal');reveal.style.visibility='visible';reveal.classList.add('show');status.textContent='Surprise! A little message just for you. 💗';popped=true;shooting=false;button.style.display='none';document.getElementById('retry').style.display='inline-block';},230);},570);}
+function resetBalloon(){const balloon=document.getElementById('balloon'),arrow=document.getElementById('arrow'),burst=document.getElementById('burst'),reveal=document.getElementById('reveal'),button=document.getElementById('shootBtn');balloon.classList.remove('pop');arrow.classList.remove('fly');burst.classList.remove('show');reveal.classList.remove('show');reveal.style.visibility='hidden';balloon.style.opacity='1';balloon.style.transform='translateX(-50%)';button.style.display='inline-block';button.disabled=false;button.style.opacity='1';document.getElementById('retry').style.display='none';document.getElementById('status').textContent='Ready when you are, Reen. 💗';popped=false;shooting=false;}
+function openLetter(){document.getElementById('envelope').classList.toggle('open');}
+document.getElementById('envelope').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter();}});
+let giftOpening=false;
+function openGift(){if(giftOpening)return;const box=document.getElementById('giftBox'),note=document.getElementById('giftNote');if(box.classList.contains('open')){box.classList.remove('open');note.classList.remove('show');return;}giftOpening=true;note.classList.remove('show');box.classList.add('open');setTimeout(()=>{note.classList.add('show');giftOpening=false;},520);}
+document.getElementById('giftBox').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGift();}});
+function celebrate(){for(let i=0;i<55;i++)setTimeout(makeHeart,i*65);}
+
+/* FIXED BACKGROUND MUSIC: resolve the audio file relative to the HTML page. */
+const music = new Audio();
+music.loop = true;
+music.volume = 0.5;
+music.preload = 'auto';
+const musicBtn = document.getElementById('musicBtn');
+let musicLoaded = false;
+music.addEventListener('canplay',()=>{musicLoaded=true;});
+music.addEventListener('play',()=>{musicBtn.textContent='♫';musicBtn.setAttribute('aria-label','Pause music');});
+music.addEventListener('pause',()=>{musicBtn.textContent='♪';musicBtn.setAttribute('aria-label','Play music');});
+music.addEventListener('error',()=>{musicLoaded=false;console.error('Could not load love.mpeg:',music.error);});
+async function toggleMusic(){
+  if(!music.paused){music.pause();return;}
+  try{
+    if(!music.src){
+      music.src = new URL('love.mpeg', window.location.href).href;
+      music.load();
+    } else if(music.error){
+      music.src = new URL('love.mpeg', window.location.href).href;
+      music.load();
+    }
+    await music.play();
+  }catch(error){
+    console.error('Music playback failed:',error);
+    alert('Music nahi chal raha. Check karo ki love.mpeg, index1.html ke same folder mein hai. Details: '+error.message);
+  }
+}
+document.querySelectorAll('.polaroid img').forEach(img=>{
+  img.addEventListener('error',()=>{img.classList.add('photo-missing');img.alt='Photo not found: '+img.getAttribute('src');img.title='Check that '+img.getAttribute('src')+' is beside index1.html';console.error('Photo could not be loaded:',img.getAttribute('src'));});
+  img.addEventListener('load',()=>img.classList.remove('photo-missing'));
+});
+</script>
+</body>
+</html>
